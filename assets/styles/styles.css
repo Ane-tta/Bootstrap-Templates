@@ -1,7 +1,7 @@
 :root {
   --text-color: #59493b;
   --accent-text-color: #cb8c7c;
-  --border-color: #efa693;
+  --pink-color: #efa693;
   --bg-color: #fff;
   --header-font: "Cormorant Garamond", serif;
   --font: "Montserrat", sans-serif;
@@ -15,11 +15,11 @@ body {
 }
 
 header {
-  background-color: #f4f4f4;
+  background-color: var(--bg-color);
 }
 
-main {
-  height: 4000px;
+section {
+  margin-bottom: 10em;
 }
 
 h1,
@@ -39,37 +39,85 @@ h2 {
   font-style: italic;
 }
 
+h3 {
+  font-size: 2.05em;
+  font-style: italic;
+  font-family: var(--header-font);
+  color: var(--accent-text-color);
+}
+
 h4 {
   text-transform: uppercase;
-  line-height: 1.33333333em;
+  line-height: 1.33em;
   text-align: justify;
   letter-spacing: 0.17em;
   font-size: 1em;
+  margin-top: 1em;
 }
 
 p {
   line-height: 1.6875em;
   font-size: 1.15em;
+  margin-top: 2em;
 }
 
 a {
   text-decoration: none;
   color: var(--text-color);
 }
+a:hover, a:focus {
+  color: var(--pink-color);
+}
 
-.hero-text {
-  text-transform: uppercase;
-  line-height: 1.375em;
+.navbar-brand {
+  --bs-navbar-brand-color: var(--text-color);
+  font-family: var(--header-font);
+  font-size: 3em;
+  font-style: italic;
+}
+
+.navbar-brand:focus, .navbar-brand:hover {
+  --bs-navbar-brand-hover-color: var(--pink-color);
+}
+
+.nav-link {
+  --bs-nav-link-color: var(--text-color);
+  --bs-nav-link-font-size: 1.17em;
+}
+.nav-link:hover, .nav-link:focus {
+  --bs-nav-link-hover-color: var(--pink-color);
+}
+
+.navbar-nav {
+  --bs-navbar-active-color: var(--accent-text-color);
+}
+
+.navbar-toggler {
+  --bs-navbar-toggler-border-color: var(--text-color);
+  --bs-navbar-color: var(--text-color);
+  --bs-navbar-toggler-focus-width: 0.1em;
+}
+
+.home {
+  margin-top: 3em;
+}
+
+.home-text {
+  max-width: 203px;
+  font-size: 1.17em;
+  margin-top: 2em;
+}
+
+.home-text,
+.nav-link {
+  line-height: 1.38em;
   text-transform: uppercase;
   letter-spacing: 0.17em;
-  font-size: 1.17130307em;
-  max-width: 203px;
-  margin-top: 2em;
 }
 
 .button {
   text-transform: uppercase;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--pink-color);
   border-radius: 0;
   padding: 0.65em 1em;
   text-decoration: none;
@@ -78,19 +126,24 @@ a {
   -moz-user-select: none;
   user-select: none;
   font-size: 1.17em;
-  line-height: 1.375em;
+  line-height: 1.38em;
   text-align: center;
   letter-spacing: 0.17em;
   color: var(--text-color);
   display: inline-block;
   font-weight: 500;
+  transition: background-color 0.5s ease;
+}
+.button:hover {
+  background-color: var(--pink-color);
+  color: var(--text-color);
+  opacity: 1;
 }
 
-.about-section article {
-  padding-left: 3em;
+.about h2 {
+  margin-top: 0.55em;
 }
-.about-section p {
-  margin-top: 2em;
+.about p {
   margin-bottom: 4.5em;
 }
 
@@ -100,6 +153,10 @@ a {
   background-repeat: no-repeat;
   height: 33em;
   min-height: 300px;
+}
+.product-card:hover {
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
 }
 
 .beauty-card {
@@ -112,6 +169,79 @@ a {
 
 .wellness-card {
   background-image: url("../images/005.webp");
+}
+
+.categories-description {
+  margin-bottom: 2em;
+}
+
+.testimonials h2 {
+  margin-bottom: 0.5em;
+}
+.testimonials p {
+  font-size: 1.07em;
+}
+.testimonials footer {
+  font-style: italic;
+  font-family: var(--header-font);
+  font-size: 1.66em;
+  color: var(--accent-text-color);
+}
+
+.contact-area h2 {
+  margin-top: 1em;
+}
+
+address {
+  font-size: 1.07em;
+  margin-top: 4em;
+}
+address > * {
+  margin-bottom: 3em;
+}
+
+blockquote:last-child {
+  margin-bottom: 0;
+}
+
+footer {
+  font-size: 1.17em;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 768px) {
+  h4,
+  p {
+    margin-top: 0;
+  }
+  section {
+    margin-bottom: 15em;
+  }
+  .about article {
+    padding-left: 3em;
+  }
+  .about h2 {
+    margin-top: 0;
+  }
+  .categories-description {
+    margin-bottom: 3em;
+  }
+  .testimonials h2 {
+    margin-bottom: 0.5rem;
+  }
+  .contact-area {
+    margin-left: 4em;
+  }
+  .contact-area h2 {
+    margin-top: 0;
+  }
+  address {
+    margin-top: 8em;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
