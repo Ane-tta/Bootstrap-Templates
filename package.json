@@ -4,7 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "watch-sass": "sass --watch ./001.Audora-Beauty-Co-Template/assets/styles/styles.sass ./001.Audora-Beauty-Co-Template/assets/styles/styles.css",
+        "watch-sass": "sass --watch ./assets/styles/styles.sass ./assets/styles/styles.css",
+        "watch-sass-1": "sass --watch ./001.Audora-Beauty-Co-Template/assets/styles/styles.sass ./001.Audora-Beauty-Co-Template/assets/styles/styles.css",
         "run-sass": "sass ./001.Audora-Beauty-Co-Template/assets/styles/styles.sass ./001.Audora-Beauty-Co-Template/assets/styles/styles.css"
     },
     "keywords": [],
