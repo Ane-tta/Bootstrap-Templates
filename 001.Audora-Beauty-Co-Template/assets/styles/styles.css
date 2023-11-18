@@ -31,11 +31,11 @@ h2 {
 }
 
 h1 {
-  font-size: 6.44em;
+  font-size: 5.8em;
 }
 
 h2 {
-  font-size: 5.6em;
+  font-size: 5em;
   font-style: italic;
 }
 
@@ -217,6 +217,12 @@ footer {
   }
 }
 @media (min-width: 768px) {
+  h1 {
+    font-size: 6.44em;
+  }
+  h2 {
+    font-size: 5.6em;
+  }
   p {
     margin-top: 0;
   }
